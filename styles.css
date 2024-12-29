@@ -1,0 +1,156 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8b500, #fceabb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Game container styling */
+.game-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for game container */
+.game-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading animation */
+#game-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #5f6368;
+    font-weight: 700;
+    animation: fadeInUp 1.5s ease-out, colorChange 2s infinite alternate;
+}
+
+/* FadeInUp animation for the heading */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color change effect for heading */
+@keyframes colorChange {
+    0% {
+        color: #f8b500;
+    }
+    50% {
+        color: #4CAF50;
+    }
+    100% {
+        color: #f8b500;
+    }
+}
+
+/* Scoreboard styles */
+.score-board {
+    margin: 25px 0;
+    font-size: 18px;
+    color: #3e4245;
+}
+
+/* Input styling */
+input {
+    padding: 12px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #d1d1d6;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    width: 80%;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Button loading styles */
+button.loading {
+    background-color: #f0ad4e;
+    cursor: not-allowed;
+}
+
+button.loading::after {
+    content: ' Loading...';
+    animation: loadingAnimation 1.5s infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        content: ' Loading.';
+    }
+    25% {
+        content: ' Loading..';
+    }
+    50% {
+        content: ' Loading...';
+    }
+    75% {
+        content: ' Loading..';
+    }
+    100% {
+        content: ' Loading.';
+    }
+}
+
+/* Result message styling */
+#result {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #f44336;
+    font-weight: bold;
+}
+
+/* Attempt count styling */
+p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Word Quest</h1>
+        <p>Guess the correct word!</p>
+
+        <div class="score-board">
+            <h4>Your Score: <span id="score">100</span></h4>
+        </div>
+
+        <input type="text" id="user-input" placeholder="Enter your guess..." maxlength="10">
+        <button onclick="playGame()">Guess</button>
+        <p id="result"></p>
+
+        <p>Attempts: <span id="attempts">0</span>/10</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
